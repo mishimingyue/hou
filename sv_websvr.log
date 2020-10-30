@@ -1,0 +1,865 @@
+[2020-08-01 18:30:06] sv_webapiv1.cpp(367):handle_querystatus_call: in = (26){"method": "query_status"}
+[2020-08-01 18:30:06] sv_protocol_api.cpp(143):sv_login: method: query_status
+[2020-08-01 18:30:06] sv_webapiv1.cpp(371):handle_querystatus_call: sv_login ret(0), output =
+{
+   "client_version" : "3.5.1.47.1.17999",
+   "err_code" : 0,
+   "session_id" : "",
+   "state_id" : 0,
+   "terr_code" : 0,
+   "tstate_id" : 0,
+   "tunnel_type" : 0,
+   "vip" : "0.0.0.0",
+   "vip_mask" : "0.0.0.0",
+   "vone_addr" : "",
+   "vone_port" : "443",
+   "vpn_version" : ""
+}
+
+[2020-08-01 18:30:06] sv_webapiv1.cpp(509):handle_sendsystemconfig_call: ===>enter /api/v1/client_system_config proc:
+
+
+[2020-08-01 18:30:06] sv_webapiv1.cpp(515):handle_sendsystemconfig_call: =============
+in = {"method":"client_system_config","addr":""}
+
+[2020-08-01 18:30:06] sv_protocol_api.cpp(143):sv_login: method: client_system_config
+[2020-08-01 18:30:06] sv_protocol.cpp(7284):read_ngvone_config: cstrNGAddr = 
+[2020-08-01 18:30:06] sv_protocol.cpp(7287):read_ngvone_config: cstrNGAddr.IsEmpty
+[2020-08-01 18:30:06] sv_protocol.cpp(7294):read_ngvone_config: cstrNGAddr = 172.18.30.117
+[2020-08-01 18:30:06] sv_protocol.cpp(7345):read_ngvone_config: 成功取出配置
+[2020-08-01 18:30:06] sv_protocol.cpp(7166):read_login_config: sv_ctx->ngvone_addr = 172.18.30.117
+[2020-08-01 18:30:06] sec_chk.cpp(378):get_pc_host_mac: get host mac: NSY55o%2BI28d01hwMl3yhiQ%3D%3D
+[2020-08-01 18:30:06] sv_webapiv1.cpp(519):handle_sendsystemconfig_call: sv_login ret = 0
+[2020-08-01 18:30:06] sv_webapiv1.cpp(531):handle_sendsystemconfig_call: 
+===>end /api/v1/client_system_config proc:
+
+
+[2020-08-01 18:30:14] sv_webapiv1.cpp(1693):handle_getauthparam_call: ===>enter /api/v1/get_auth_param proc:
+
+
+[2020-08-01 18:30:14] sv_webapiv1.cpp(1700):handle_getauthparam_call: =============
+in = {"method":"get_auth_param","serverAddr":"172.18.30.117","serverPort":"443","proxyType":"","proxyAddr":"","proxyPort":"","proxyUser":"","proxyPwd":"","proxyDomain":"","user":"bGl5dWU%3D","pwd":"MTIz"}
+
+[2020-08-01 18:30:14] sv_protocol_api.cpp(143):sv_login: method: get_auth_param
+[2020-08-01 18:30:14] sv_protocol_api.cpp(1548):deserialize_get_auth_param: sv_ctx->data_protocol: 0
+[2020-08-01 18:30:14] sv_protocol_api.cpp(1550):deserialize_get_auth_param: vone_info->bProtocolType: 1
+[2020-08-01 18:30:14] sv_protocol_api.cpp(1607):deserialize_get_auth_param: szUserName = bGl5dWU%3D
+[2020-08-01 18:30:14] sv_protocol.cpp(3164):link_vone: enter: state_id(0), err_code(0), try to change new state_id(36)
+[2020-08-01 18:30:14] sv_protocol.cpp(3193):link_vone: state_id(36), err_code(0)
+[2020-08-01 18:30:14] sv_protocol.cpp(9856):sv_send_spa_packet: enter...
+[2020-08-01 18:30:14] sv_protocol.cpp(9924):sv_send_spa_packet: SendSPAMessageToVone ...
+[2020-08-01 18:30:14] sv_protocol.cpp(9926):sv_send_spa_packet: SendSPAMessageToVone Finished.
+[2020-08-01 18:30:14] sv_protocol.cpp(5984):ConnectWithTimeoutByMsec: ioctlsocket result: 0
+[2020-08-01 18:30:14] sv_protocol.cpp(9837):Connect_with_timeout_times: Try Connect to 172.18.30.117:443 with timeout 300ms return true at time 1
+[2020-08-01 18:30:14] sv_protocol.cpp(5939):ConnectWithTimeout: ioctlsocket result: 0
+[2020-08-01 18:30:14] sv_protocol.cpp(1958):connect_vone: ret: 0
+[2020-08-01 18:30:14] sv_protocol.cpp(1970):connect_vone: try to connect vone: 172.18.30.117:443, porto(0) ...
+[2020-08-01 18:30:14] sv_protocol.cpp(1971):connect_vone: cipher_suite: AES128-SHA:AES256-SHA:DES-CBC3-SHA:RC4-SHA:ECDHE-ECDSA-RC4-SHA:ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:ECDH+AES128:RSA+AESGCM:!aNULL:!MD5
+[2020-08-01 18:30:14] sv_protocol.cpp(2007):connect_vone: return ret: 0
+[2020-08-01 18:30:14] sv_protocol.cpp(5576):send_ssl_data: send_buf:
+POST /vone/login/auth_param HTTP/1.1
+Referer: https://172.18.30.117/
+User-Agent: VONE-AUTH,WINDOWS,NULL,TOPCLINET,NULL
+Connection: keep-alive
+Host: 172.18.30.117
+Content-Length: 0
+Cookie: topsecsvportallogodir=default; topsecsvuilanguage=chinese; login_err_num=0; topsecsvportalstyle=style1; topsecsvportalname=default; seccheck=0
+
+
+[2020-08-01 18:30:14] sv_protocol.cpp(5766):recv_ssl_data: ret=1048
+[2020-08-01 18:30:14] sv_protocol.cpp(5778):recv_ssl_data: retcode=0, recv_buf:
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sat, 01 Aug 2020 10:42:06 GMT
+Content-Type: application/x-javascript
+Content-Length: 1048
+Connection: keep-alive
+Pragma: no-cache
+Vary: Accept-Encoding
+X-Frame-Options: SAMEORIGIN
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-XSS-Protection:: 1
+X-Content-Type-Options:: nosniff
+X-Download-Options:: noopen
+Referrer-Policy: no-referrer-when-downgrade
+Content-Security-Policy: default-src 'self'; script-src https: 'unsafe-inline' 'unsafe-eval'; style-src https: 'unsafe-inline' 'unsafe-eval';img-src https:;connect-src *; frame-src *
+X-Permitted-Cross-Domain-Policies: master-only
+
+{
+    gid:"auto",
+    webvpn:"off",
+    webvpn_user_window:"off",
+    cert:"on",
+    anony_switch:"on",
+    pswd:"on",
+    twofactor:"on",
+    face:"off",
+    mlink:"off",
+    check_client_before_login:"off",
+    plugin:"on",
+    show_cert:"off",
+    show_svclient:"off",
+    show_winclient:"off",
+    url_usbkey:"",
+    help_url:"",
+    twofactor_hide:"off",
+    plugin_href_show:"off",
+    html_notice_switch:"off",
+    vpn_version:"ngvone",
+    cipher_type:"0",
+    protocol_type:"0",
+    cert_port:"8443",
+    ca_list:[{"dnname":"liyue2"}],
+    auth_port:"443",
+    auth_protocol:"0",
+    data_port:"443",
+    data_protocol:"0",
+    cert_type:"0",
+    show_linux_client:"off",
+    show_mac_client:"off",
+    show_android_client:"off",
+    show_ios_client:"off",
+    linux_url:"",
+    mac_url:"",
+    android_url:"",
+    ios_url:"",
+    optimize:"on",
+    vpn_version:"ngvone",
+    win_version:"3.5.1.46.1.17999",
+    mac_version:"3.5.0.37.3.17999",
+    oauth2_switch:"off",
+    appid:"",
+    agentid:"",
+    redirect_uri:"",
+    oauth2_url:""
+}
+[2020-08-01 18:30:14] sv_protocol.cpp(3928):get_auth_param: VOne网关是 ngvone 版本
+[2020-08-01 18:30:14] sv_protocol.cpp(3944):get_auth_param: auth_param.newServer = 1
+[2020-08-01 18:30:14] sv_protocol.cpp(3971):get_auth_param: state_id = 36
+[2020-08-01 18:30:14] sv_protocol.cpp(3221):link_vone: leave: state_id(0), err_code(0)
+[2020-08-01 18:30:14] sv_protocol_api.cpp(1159):api_get_auth_param: sv_ctx->err_code = 0
+[2020-08-01 18:30:14] sv_webapiv1.cpp(1705):handle_getauthparam_call: sv_login ret = 0
+[2020-08-01 18:30:14] sv_webapiv1.cpp(1712):handle_getauthparam_call: output = {
+    gid:"auto",
+    webvpn:"off",
+    webvpn_user_window:"off",
+    cert:"on",
+    anony_switch:"on",
+    pswd:"on",
+    twofactor:"on",
+    face:"off",
+    mlink:"off",
+    check_client_before_login:"off",
+    plugin:"on",
+    show_cert:"off",
+    show_svclient:"off",
+    show_winclient:"off",
+    url_usbkey:"",
+    help_url:"",
+    twofactor_hide:"off",
+    plugin_href_show:"off",
+    html_notice_switch:"off",
+    vpn_version:"ngvone",
+    cipher_type:"0",
+    protocol_type:"0",
+    cert_port:"8443",
+    ca_list:[{"dnname":"liyue2"}],
+    auth_port:"443",
+    auth_protocol:"0",
+    data_port:"443",
+    data_protocol:"0",
+    cert_type:"0",
+    show_linux_client:"off",
+    show_mac_client:"off",
+    show_android_client:"off",
+    show_ios_client:"off",
+    linux_url:"",
+    mac_url:"",
+    android_url:"",
+    ios_url:"",
+    optimize:"on",
+    vpn_version:"ngvone",
+    win_version:"3.5.1.46.1.17999",
+    mac_version:"3.5.0.37.3.17999",
+    oauth2_switch:"off",
+    appid:"",
+    agentid:"",
+    redirect_uri:"",
+    oauth2_url:""
+}
+[2020-08-01 18:30:14] sv_webapiv1.cpp(1718):handle_getauthparam_call: 
+===>end /api/v1/get_auth_param proc:
+
+
+[2020-08-01 18:30:14] sv_webapiv1.cpp(191):handle_loginbypwd_call: ===>enter /api/v1/login_by_pwd proc:
+
+
+[2020-08-01 18:30:14] sv_webapiv1.cpp(197):handle_loginbypwd_call: =============
+in = {"method": "login_by_pwd","vone":{ "addr":"172.18.30.117","port":"443", "user":"bGl5dWU%3D","pwd":"MTIz"}, "proxy":{ "type":"","addr":"","port":"","user":"","pwd":"","domain":""} ,"vpn_version" :"ngvone", "auth_protocol":"0" ,"auth_port": "443" ,"data_port": "443" ,"data_protocol": "0" ,"cert_type": "0","remember_pwd": "off"}
+
+[2020-08-01 18:30:14] sv_protocol_api.cpp(143):sv_login: method: login_by_pwd
+[2020-08-01 18:30:14] sv_protocol_api.cpp(1689):deserialize_param: sv_ctx->VoneAddress: 172.18.30.117
+[2020-08-01 18:30:14] sv_protocol_api.cpp(1799):deserialize_param: sv_ctx->data_protocol: 0
+[2020-08-01 18:30:14] sv_protocol_api.cpp(1801):deserialize_param: vone_info->bProtocolType: 1
+[2020-08-01 18:30:14] sv_protocol_api.cpp(1806):deserialize_param: sv_ctx->auth_port: 443
+[2020-08-01 18:30:14] sv_protocol_api.cpp(1817):deserialize_param: sv_ctx->cert_type: 0
+[2020-08-01 18:30:14] sv_protocol_api.cpp(1823):deserialize_param: sv_ctx->vpn_version: ngvone
+[2020-08-01 18:30:14] sv_protocol_api.cpp(1833):deserialize_param: VOne网关是 ngvone 版本
+[2020-08-01 18:30:14] sv_protocol_api.cpp(1920):deserialize_param: param[gid][cgid] 为空
+[2020-08-01 18:30:14] sv_protocol.cpp(370):login_vone: enter: state_id(0), err_code(0), try to change new state_id(0)
+[2020-08-01 18:30:14] sv_protocol.cpp(410):login_vone: state_id(0), err_code(0)
+[2020-08-01 18:30:14] sv_protocol.cpp(9856):sv_send_spa_packet: enter...
+[2020-08-01 18:30:14] sv_protocol.cpp(9924):sv_send_spa_packet: SendSPAMessageToVone ...
+[2020-08-01 18:30:14] sv_protocol.cpp(9926):sv_send_spa_packet: SendSPAMessageToVone Finished.
+[2020-08-01 18:30:14] sv_protocol.cpp(5984):ConnectWithTimeoutByMsec: ioctlsocket result: 0
+[2020-08-01 18:30:14] sv_protocol.cpp(9837):Connect_with_timeout_times: Try Connect to 172.18.30.117:443 with timeout 300ms return true at time 1
+[2020-08-01 18:30:14] sv_protocol.cpp(5939):ConnectWithTimeout: ioctlsocket result: 0
+[2020-08-01 18:30:14] sv_protocol.cpp(1958):connect_vone: ret: 0
+[2020-08-01 18:30:14] sv_protocol.cpp(1970):connect_vone: try to connect vone: 172.18.30.117:443, porto(0) ...
+[2020-08-01 18:30:14] sv_protocol.cpp(1971):connect_vone: cipher_suite: AES128-SHA:AES256-SHA:DES-CBC3-SHA:RC4-SHA:ECDHE-ECDSA-RC4-SHA:ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:ECDH+AES128:RSA+AESGCM:!aNULL:!MD5
+[2020-08-01 18:30:15] sv_protocol.cpp(2007):connect_vone: return ret: 0
+[2020-08-01 18:30:15] sv_protocol.cpp(410):login_vone: state_id(5), err_code(0)
+[2020-08-01 18:30:15] sv_protocol.cpp(5576):send_ssl_data: send_buf:
+POST /vone/login/auth_param HTTP/1.1
+Referer: https://172.18.30.117/
+User-Agent: VONE-AUTH,WINDOWS,NULL,TOPCLINET,NULL
+Connection: keep-alive
+Host: 172.18.30.117
+Content-Length: 0
+Cookie: topsecsvportallogodir=default; topsecsvuilanguage=chinese; login_err_num=0; topsecsvportalstyle=style1; topsecsvportalname=default; seccheck=0
+
+
+[2020-08-01 18:30:15] sv_protocol.cpp(5766):recv_ssl_data: ret=1048
+[2020-08-01 18:30:15] sv_protocol.cpp(5778):recv_ssl_data: retcode=0, recv_buf:
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sat, 01 Aug 2020 10:42:07 GMT
+Content-Type: application/x-javascript
+Content-Length: 1048
+Connection: keep-alive
+Pragma: no-cache
+Vary: Accept-Encoding
+X-Frame-Options: SAMEORIGIN
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-XSS-Protection:: 1
+X-Content-Type-Options:: nosniff
+X-Download-Options:: noopen
+Referrer-Policy: no-referrer-when-downgrade
+Content-Security-Policy: default-src 'self'; script-src https: 'unsafe-inline' 'unsafe-eval'; style-src https: 'unsafe-inline' 'unsafe-eval';img-src https:;connect-src *; frame-src *
+X-Permitted-Cross-Domain-Policies: master-only
+
+{
+    gid:"auto",
+    webvpn:"off",
+    webvpn_user_window:"off",
+    cert:"on",
+    anony_switch:"on",
+    pswd:"on",
+    twofactor:"on",
+    face:"off",
+    mlink:"off",
+    check_client_before_login:"off",
+    plugin:"on",
+    show_cert:"off",
+    show_svclient:"off",
+    show_winclient:"off",
+    url_usbkey:"",
+    help_url:"",
+    twofactor_hide:"off",
+    plugin_href_show:"off",
+    html_notice_switch:"off",
+    vpn_version:"ngvone",
+    cipher_type:"0",
+    protocol_type:"0",
+    cert_port:"8443",
+    ca_list:[{"dnname":"liyue2"}],
+    auth_port:"443",
+    auth_protocol:"0",
+    data_port:"443",
+    data_protocol:"0",
+    cert_type:"0",
+    show_linux_client:"off",
+    show_mac_client:"off",
+    show_android_client:"off",
+    show_ios_client:"off",
+    linux_url:"",
+    mac_url:"",
+    android_url:"",
+    ios_url:"",
+    optimize:"on",
+    vpn_version:"ngvone",
+    win_version:"3.5.1.46.1.17999",
+    mac_version:"3.5.0.37.3.17999",
+    oauth2_switch:"off",
+    appid:"",
+    agentid:"",
+    redirect_uri:"",
+    oauth2_url:""
+}
+[2020-08-01 18:30:15] sv_protocol.cpp(3928):get_auth_param: VOne网关是 ngvone 版本
+[2020-08-01 18:30:15] sv_protocol.cpp(3944):get_auth_param: auth_param.newServer = 1
+[2020-08-01 18:30:15] sv_protocol.cpp(3971):get_auth_param: state_id = 5
+[2020-08-01 18:30:15] sv_protocol.cpp(4057):get_auth_param: json parse error
+[2020-08-01 18:30:15] sv_protocol.cpp(2056):send_login_url: before get_pc_host_mac
+[2020-08-01 18:30:15] sv_protocol.cpp(563):request_for_login_by_pwd_: sv_ctx->sms_param.sms_id = 
+[2020-08-01 18:30:15] sv_protocol.cpp(564):request_for_login_by_pwd_: sv_ctx->sms_param.sms_code = 
+[2020-08-01 18:30:15] sv_protocol.cpp(899):request_for_login_by_pwd_: data = [U=bGl5dWU%3D&P=MTIz&HASH=6F8E7D638AB67AEA01DA5B5ADF6A479831097307C1EBDE9F5EA41617C3B54226&S_CODE=NSY55o%2BI28d01hwMl3yhiQ%3D%3D]
+[2020-08-01 18:30:15] sv_protocol.cpp(2108):send_login_url: send authenticate data to vone ...
+[2020-08-01 18:30:15] sv_protocol.cpp(5576):send_ssl_data: send_buf:
+POST /vone/login/user_pswd HTTP/1.1
+Referer: https://172.18.30.117/vone/login/user_pswd/
+Host: 172.18.30.117
+Cookie: topsecsvuilanguage=chinese; sv_un=bGl5dWU%3D; login_err_num=0; topsecsvportalstyle=style1; topsecsvportalname=default; 
+Content-Length: 127
+Content-Type: application/x-www-form-urlencoded
+Connection: Keep-Alive
+User-Agent: VONE-AUTH,WINDOWS,NULL,TOPCLINET,NULL
+
+U=bGl5dWU%3D&P=MTIz&HASH=6F8E7D638AB67AEA01DA5B5ADF6A479831097307C1EBDE9F5EA41617C3B54226&S_CODE=NSY55o%2BI28d01hwMl3yhiQ%3D%3D
+[2020-08-01 18:30:15] sv_protocol.cpp(5667):recv_ssl_data: retcode=0, ContentLength:7664
+[2020-08-01 18:30:15] sv_protocol.cpp(5686):recv_ssl_data: ret=7664
+[2020-08-01 18:30:15] sv_protocol.cpp(5727):recv_ssl_data: retcode=0, recv_buf:
+
+2000
+
+[2020-08-01 18:30:15] sv_protocol.cpp(5667):recv_ssl_data: retcode=0, ContentLength:8192
+[2020-08-01 18:30:15] sv_protocol.cpp(5686):recv_ssl_data: ret=7697
+[2020-08-01 18:30:15] sv_protocol.cpp(5686):recv_ssl_data: ret=495
+[2020-08-01 18:30:15] sv_protocol.cpp(5727):recv_ssl_data: retcode=0, recv_buf:
+
+2000
+
+[2020-08-01 18:30:15] sv_protocol.cpp(5667):recv_ssl_data: retcode=0, ContentLength:8192
+[2020-08-01 18:30:15] sv_protocol.cpp(5686):recv_ssl_data: ret=8192
+[2020-08-01 18:30:15] sv_protocol.cpp(5727):recv_ssl_data: retcode=0, recv_buf:
+
+2000
+
+[2020-08-01 18:30:15] sv_protocol.cpp(5667):recv_ssl_data: retcode=0, ContentLength:8192
+[2020-08-01 18:30:15] sv_protocol.cpp(5686):recv_ssl_data: ret=7681
+[2020-08-01 18:30:15] sv_protocol.cpp(5686):recv_ssl_data: ret=511
+[2020-08-01 18:30:15] sv_protocol.cpp(5727):recv_ssl_data: retcode=0, recv_buf:
+
+2000
+
+[2020-08-01 18:30:15] sv_protocol.cpp(5667):recv_ssl_data: retcode=0, ContentLength:8192
+[2020-08-01 18:30:15] sv_protocol.cpp(5686):recv_ssl_data: ret=8192
+[2020-08-01 18:30:15] sv_protocol.cpp(5727):recv_ssl_data: retcode=0, recv_buf:
+
+2000
+
+[2020-08-01 18:30:15] sv_protocol.cpp(5667):recv_ssl_data: retcode=0, ContentLength:8192
+[2020-08-01 18:30:15] sv_protocol.cpp(5686):recv_ssl_data: ret=7665
+[2020-08-01 18:30:15] sv_protocol.cpp(5686):recv_ssl_data: ret=527
+[2020-08-01 18:30:15] sv_protocol.cpp(5727):recv_ssl_data: retcode=0, recv_buf:
+
+1000
+
+[2020-08-01 18:30:15] sv_protocol.cpp(5667):recv_ssl_data: retcode=0, ContentLength:4096
+[2020-08-01 18:30:15] sv_protocol.cpp(5686):recv_ssl_data: ret=4096
+[2020-08-01 18:30:15] sv_protocol.cpp(5727):recv_ssl_data: retcode=0, recv_buf:
+
+1000
+
+[2020-08-01 18:30:15] sv_protocol.cpp(5667):recv_ssl_data: retcode=0, ContentLength:4096
+[2020-08-01 18:30:15] sv_protocol.cpp(5686):recv_ssl_data: ret=4096
+[2020-08-01 18:30:15] sv_protocol.cpp(5727):recv_ssl_data: retcode=0, recv_buf:
+
+2000
+
+[2020-08-01 18:30:15] sv_protocol.cpp(5667):recv_ssl_data: retcode=0, ContentLength:8192
+[2020-08-01 18:30:15] sv_protocol.cpp(5686):recv_ssl_data: ret=7641
+[2020-08-01 18:30:15] sv_protocol.cpp(5686):recv_ssl_data: ret=551
+[2020-08-01 18:30:15] sv_protocol.cpp(5727):recv_ssl_data: retcode=0, recv_buf:
+
+2000
+
+[2020-08-01 18:30:15] sv_protocol.cpp(5667):recv_ssl_data: retcode=0, ContentLength:8192
+[2020-08-01 18:30:15] sv_protocol.cpp(5686):recv_ssl_data: ret=8192
+[2020-08-01 18:30:15] sv_protocol.cpp(5727):recv_ssl_data: retcode=0, recv_buf:
+
+1000
+
+[2020-08-01 18:30:15] sv_protocol.cpp(5667):recv_ssl_data: retcode=0, ContentLength:4096
+[2020-08-01 18:30:15] sv_protocol.cpp(5686):recv_ssl_data: ret=4096
+[2020-08-01 18:30:15] sv_protocol.cpp(5727):recv_ssl_data: retcode=0, recv_buf:
+
+2000
+
+[2020-08-01 18:30:15] sv_protocol.cpp(5667):recv_ssl_data: retcode=0, ContentLength:8192
+[2020-08-01 18:30:15] sv_protocol.cpp(5686):recv_ssl_data: ret=3521
+[2020-08-01 18:30:15] sv_protocol.cpp(5686):recv_ssl_data: ret=4671
+[2020-08-01 18:30:16] sv_protocol.cpp(5727):recv_ssl_data: retcode=0, recv_buf:
+
+1000
+
+[2020-08-01 18:30:16] sv_protocol.cpp(5667):recv_ssl_data: retcode=0, ContentLength:4096
+[2020-08-01 18:30:16] sv_protocol.cpp(5686):recv_ssl_data: ret=4096
+[2020-08-01 18:30:16] sv_protocol.cpp(5727):recv_ssl_data: retcode=0, recv_buf:
+
+2000
+
+[2020-08-01 18:30:16] sv_protocol.cpp(5667):recv_ssl_data: retcode=0, ContentLength:8192
+[2020-08-01 18:30:16] sv_protocol.cpp(5686):recv_ssl_data: ret=7601
+[2020-08-01 18:30:16] sv_protocol.cpp(5686):recv_ssl_data: ret=591
+[2020-08-01 18:30:16] sv_protocol.cpp(5727):recv_ssl_data: retcode=0, recv_buf:
+
+2000
+
+[2020-08-01 18:30:16] sv_protocol.cpp(5667):recv_ssl_data: retcode=0, ContentLength:8192
+[2020-08-01 18:30:16] sv_protocol.cpp(5686):recv_ssl_data: ret=8192
+[2020-08-01 18:30:16] sv_protocol.cpp(5727):recv_ssl_data: retcode=0, recv_buf:
+
+2000
+
+[2020-08-01 18:30:16] sv_protocol.cpp(5667):recv_ssl_data: retcode=0, ContentLength:8192
+[2020-08-01 18:30:16] sv_protocol.cpp(5686):recv_ssl_data: ret=7585
+[2020-08-01 18:30:16] sv_protocol.cpp(5686):recv_ssl_data: ret=607
+[2020-08-01 18:30:16] sv_protocol.cpp(5727):recv_ssl_data: retcode=0, recv_buf:
+
+2000
+
+[2020-08-01 18:30:16] sv_protocol.cpp(5667):recv_ssl_data: retcode=0, ContentLength:8192
+[2020-08-01 18:30:16] sv_protocol.cpp(5686):recv_ssl_data: ret=8192
+[2020-08-01 18:30:16] sv_protocol.cpp(5727):recv_ssl_data: retcode=0, recv_buf:
+
+1000
+
+[2020-08-01 18:30:16] sv_protocol.cpp(5667):recv_ssl_data: retcode=0, ContentLength:4096
+[2020-08-01 18:30:16] sv_protocol.cpp(5686):recv_ssl_data: ret=4096
+[2020-08-01 18:30:16] sv_protocol.cpp(5727):recv_ssl_data: retcode=0, recv_buf:
+
+2000
+
+[2020-08-01 18:30:16] sv_protocol.cpp(5667):recv_ssl_data: retcode=0, ContentLength:8192
+[2020-08-01 18:30:16] sv_protocol.cpp(5686):recv_ssl_data: ret=3465
+[2020-08-01 18:30:16] sv_protocol.cpp(5686):recv_ssl_data: ret=4727
+[2020-08-01 18:30:16] sv_protocol.cpp(5727):recv_ssl_data: retcode=0, recv_buf:
+
+2000
+
+[2020-08-01 18:30:16] sv_protocol.cpp(5667):recv_ssl_data: retcode=0, ContentLength:8192
+[2020-08-01 18:30:16] sv_protocol.cpp(5686):recv_ssl_data: ret=8192
+[2020-08-01 18:30:16] sv_protocol.cpp(5727):recv_ssl_data: retcode=0, recv_buf:
+
+2000
+
+[2020-08-01 18:30:16] sv_protocol.cpp(5667):recv_ssl_data: retcode=0, ContentLength:8192
+[2020-08-01 18:30:16] sv_protocol.cpp(5686):recv_ssl_data: ret=3449
+[2020-08-01 18:30:16] sv_protocol.cpp(5686):recv_ssl_data: ret=4743
+[2020-08-01 18:30:16] sv_protocol.cpp(5727):recv_ssl_data: retcode=0, recv_buf:
+
+2000
+
+[2020-08-01 18:30:16] sv_protocol.cpp(5667):recv_ssl_data: retcode=0, ContentLength:8192
+[2020-08-01 18:30:16] sv_protocol.cpp(5686):recv_ssl_data: ret=8192
+[2020-08-01 18:30:16] sv_protocol.cpp(5727):recv_ssl_data: retcode=0, recv_buf:
+
+1000
+
+[2020-08-01 18:30:16] sv_protocol.cpp(5667):recv_ssl_data: retcode=0, ContentLength:4096
+[2020-08-01 18:30:16] sv_protocol.cpp(5686):recv_ssl_data: ret=3433
+[2020-08-01 18:30:16] sv_protocol.cpp(5686):recv_ssl_data: ret=663
+[2020-08-01 18:30:16] sv_protocol.cpp(5727):recv_ssl_data: retcode=0, recv_buf:
+
+2000
+
+[2020-08-01 18:30:16] sv_protocol.cpp(5667):recv_ssl_data: retcode=0, ContentLength:8192
+[2020-08-01 18:30:16] sv_protocol.cpp(5686):recv_ssl_data: ret=8192
+[2020-08-01 18:30:16] sv_protocol.cpp(5727):recv_ssl_data: retcode=0, recv_buf:
+
+2000
+
+[2020-08-01 18:30:16] sv_protocol.cpp(5667):recv_ssl_data: retcode=0, ContentLength:8192
+[2020-08-01 18:30:16] sv_protocol.cpp(5686):recv_ssl_data: ret=7513
+[2020-08-01 18:30:16] sv_protocol.cpp(5686):recv_ssl_data: ret=679
+[2020-08-01 18:30:16] sv_protocol.cpp(5727):recv_ssl_data: retcode=0, recv_buf:
+
+2000
+
+[2020-08-01 18:30:16] sv_protocol.cpp(5667):recv_ssl_data: retcode=0, ContentLength:8192
+[2020-08-01 18:30:16] sv_protocol.cpp(5686):recv_ssl_data: ret=8192
+[2020-08-01 18:30:16] sv_protocol.cpp(5727):recv_ssl_data: retcode=0, recv_buf:
+
+2000
+
+[2020-08-01 18:30:16] sv_protocol.cpp(5667):recv_ssl_data: retcode=0, ContentLength:8192
+[2020-08-01 18:30:16] sv_protocol.cpp(5686):recv_ssl_data: ret=7497
+[2020-08-01 18:30:16] sv_protocol.cpp(5686):recv_ssl_data: ret=695
+[2020-08-01 18:30:16] sv_protocol.cpp(5727):recv_ssl_data: retcode=0, recv_buf:
+
+1000
+
+[2020-08-01 18:30:16] sv_protocol.cpp(5667):recv_ssl_data: retcode=0, ContentLength:4096
+[2020-08-01 18:30:16] sv_protocol.cpp(5686):recv_ssl_data: ret=4096
+[2020-08-01 18:30:16] sv_protocol.cpp(5727):recv_ssl_data: retcode=0, recv_buf:
+
+2000
+
+[2020-08-01 18:30:16] sv_protocol.cpp(5667):recv_ssl_data: retcode=0, ContentLength:8192
+[2020-08-01 18:30:16] sv_protocol.cpp(5686):recv_ssl_data: ret=8192
+[2020-08-01 18:30:16] sv_protocol.cpp(5727):recv_ssl_data: retcode=0, recv_buf:
+
+2000
+
+[2020-08-01 18:30:16] sv_protocol.cpp(5667):recv_ssl_data: retcode=0, ContentLength:8192
+[2020-08-01 18:30:16] sv_protocol.cpp(5686):recv_ssl_data: ret=3377
+[2020-08-01 18:30:16] sv_protocol.cpp(5686):recv_ssl_data: ret=4815
+[2020-08-01 18:30:16] sv_protocol.cpp(5727):recv_ssl_data: retcode=0, recv_buf:
+
+8000
+
+[2020-08-01 18:30:16] sv_protocol.cpp(5667):recv_ssl_data: retcode=0, ContentLength:32768
+[2020-08-01 18:30:16] sv_protocol.cpp(5686):recv_ssl_data: ret=11561
+[2020-08-01 18:30:16] sv_protocol.cpp(5686):recv_ssl_data: ret=16384
+[2020-08-01 18:30:16] sv_protocol.cpp(5686):recv_ssl_data: ret=4823
+[2020-08-01 18:30:16] sv_protocol.cpp(5727):recv_ssl_data: retcode=0, recv_buf:
+
+8000
+
+[2020-08-01 18:30:16] sv_protocol.cpp(5667):recv_ssl_data: retcode=0, ContentLength:32768
+[2020-08-01 18:30:16] sv_protocol.cpp(5686):recv_ssl_data: ret=11553
+[2020-08-01 18:30:16] sv_protocol.cpp(5686):recv_ssl_data: ret=16384
+[2020-08-01 18:30:16] sv_protocol.cpp(5686):recv_ssl_data: ret=4831
+[2020-08-01 18:30:16] sv_protocol.cpp(5727):recv_ssl_data: retcode=0, recv_buf:
+
+8000
+
+[2020-08-01 18:30:16] sv_protocol.cpp(5667):recv_ssl_data: retcode=0, ContentLength:32768
+[2020-08-01 18:30:16] sv_protocol.cpp(5686):recv_ssl_data: ret=11545
+[2020-08-01 18:30:16] sv_protocol.cpp(5686):recv_ssl_data: ret=16384
+[2020-08-01 18:30:16] sv_protocol.cpp(5686):recv_ssl_data: ret=4839
+[2020-08-01 18:30:16] sv_protocol.cpp(5727):recv_ssl_data: retcode=0, recv_buf:
+
+4000
+
+[2020-08-01 18:30:16] sv_protocol.cpp(5667):recv_ssl_data: retcode=0, ContentLength:16384
+[2020-08-01 18:30:16] sv_protocol.cpp(5686):recv_ssl_data: ret=11537
+[2020-08-01 18:30:16] sv_protocol.cpp(5686):recv_ssl_data: ret=4847
+[2020-08-01 18:30:16] sv_protocol.cpp(5727):recv_ssl_data: retcode=0, recv_buf:
+
+2000
+
+[2020-08-01 18:30:16] sv_protocol.cpp(5667):recv_ssl_data: retcode=0, ContentLength:8192
+[2020-08-01 18:30:16] sv_protocol.cpp(5686):recv_ssl_data: ret=8192
+[2020-08-01 18:30:16] sv_protocol.cpp(5727):recv_ssl_data: retcode=0, recv_buf:
+
+1000
+
+[2020-08-01 18:30:16] sv_protocol.cpp(5667):recv_ssl_data: retcode=0, ContentLength:4096
+[2020-08-01 18:30:16] sv_protocol.cpp(5686):recv_ssl_data: ret=3329
+[2020-08-01 18:30:16] sv_protocol.cpp(5686):recv_ssl_data: ret=767
+[2020-08-01 18:30:16] sv_protocol.cpp(5727):recv_ssl_data: retcode=0, recv_buf:
+
+1000
+
+[2020-08-01 18:30:16] sv_protocol.cpp(5667):recv_ssl_data: retcode=0, ContentLength:4096
+[2020-08-01 18:30:16] sv_protocol.cpp(5686):recv_ssl_data: ret=4096
+[2020-08-01 18:30:16] sv_protocol.cpp(5727):recv_ssl_data: retcode=0, recv_buf:
+
+a9
+
+[2020-08-01 18:30:16] sv_protocol.cpp(5667):recv_ssl_data: retcode=0, ContentLength:169
+[2020-08-01 18:30:16] sv_protocol.cpp(5686):recv_ssl_data: ret=169
+[2020-08-01 18:30:16] sv_protocol.cpp(5727):recv_ssl_data: retcode=0, recv_buf:
+
+0
+
+[2020-08-01 18:30:16] sv_protocol.cpp(5667):recv_ssl_data: retcode=0, ContentLength:0
+[2020-08-01 18:30:16] sv_protocol.cpp(5731):recv_ssl_data: Total length:348810
+[2020-08-01 18:30:16] sv_protocol.cpp(5741):recv_ssl_data: retcode=0, recv_length:348810
+
+[2020-08-01 18:30:16] sv_protocol.cpp(2183):send_login_url: sv_ctx->sv_client_addr = 
+[2020-08-01 18:30:16] sv_protocol.cpp(2184):send_login_url: sv_ctx->sv_client_vsid = 
+[2020-08-01 18:30:16] sv_protocol.cpp(2185):send_login_url: user(bGl5dWU%3D) login successfully, session id(2&181dae6e24a8f5fd).
+[2020-08-01 18:30:16] sv_protocol.cpp(3009):record_addr_user: enter record_addr_user
+[2020-08-01 18:30:16] sv_protocol.cpp(3085):record_addr_user: end record_addr_user
+[2020-08-01 18:30:16] sv_protocol.cpp(2742):analyse_optimize_param: enter analyse_optimize_param
+[2020-08-01 18:30:16] sv_protocol.cpp(4565):set_pc_config_reg: ret: 0
+[2020-08-01 18:30:16] sv_protocol.cpp(2784):analyse_optimize_param: sha256Str = FA7FA9E41AE64497D4EABE7054E01738BFD651A9299C758E7B17D5156443277B
+[2020-08-01 18:30:16] sv_protocol.cpp(2877):analyse_optimize_param: SetFileAttributes
+[2020-08-01 18:30:16] sv_protocol.cpp(2922):analyse_optimize_param: user_param
+[2020-08-01 18:30:16] sv_protocol.cpp(2963):analyse_optimize_param: get_sec_info
+[2020-08-01 18:30:16] sv_protocol.cpp(2999):analyse_optimize_param: virus
+[2020-08-01 18:30:16] sv_protocol.cpp(3002):analyse_optimize_param: end analyse_optimize_param
+[2020-08-01 18:30:16] sv_protocol.cpp(410):login_vone: state_id(12), err_code(0)
+[2020-08-01 18:30:16] sv_protocol.cpp(506):login_vone: leave: state_id(21), err_code(0)
+[2020-08-01 18:30:16] sv_webapiv1.cpp(202):handle_loginbypwd_call: sv_login ret = 0
+[2020-08-01 18:30:16] sv_webapiv1.cpp(203):handle_loginbypwd_call: sv_login output =
+{
+   "account_end" : "",
+   "err_code" : 0,
+   "err_msg" : "",
+   "login_err_num" : 0,
+   "msg" : "",
+   "pwd_remind" : "",
+   "session_id" : "2&181dae6e24a8f5fd",
+   "state_id" : 21,
+   "sv_client_addr" : "",
+   "sv_client_vsid" : "",
+   "tstate_id" : 0,
+   "tunnel_type" : "",
+   "user_name" : "",
+   "vip" : "",
+   "vip_mask" : ""
+}
+
+[2020-08-01 18:30:16] sv_webapiv1.cpp(212):handle_loginbypwd_call: 
+===>end /api/v1/login_by_pwd proc:
+
+
+[2020-08-01 18:30:17] sv_webapiv1.cpp(1613):handle_getconfig_call: ===>enter /api/v1/get_config_info proc:
+
+
+[2020-08-01 18:30:17] sv_webapiv1.cpp(1619):handle_getconfig_call: =============
+in = {"method":"get_config_info"}
+
+[2020-08-01 18:30:17] sv_protocol_api.cpp(143):sv_login: method: get_config_info
+[2020-08-01 18:30:17] sv_webapiv1.cpp(1655):handle_getconfig_call: szConfigFilePath = C:\Users\vpn\AppData\LocalLow\configinfo.txt
+[2020-08-01 18:30:17] sv_webapiv1.cpp(1678):handle_getconfig_call: 
+===>end /api/v1/get_config_info proc:
+
+
+[2020-08-01 18:30:17] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:30:18] sv_protocol.cpp(6224):start_naclient: vone_info->bProtocolType: 1
+[2020-08-01 18:30:18] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:30:19] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:30:20] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:30:21] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:30:21] sv_protocol.cpp(5244):query_statistics: 检测到添加路由异常，尝试重新添加。
+[2020-08-01 18:31:12] sv_protocol.cpp(6224):start_naclient: vone_info->bProtocolType: 1
+[2020-08-01 18:31:15] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:31:15] sv_protocol.cpp(5244):query_statistics: 检测到添加路由异常，尝试重新添加。
+[2020-08-01 18:32:06] sv_protocol.cpp(6224):start_naclient: vone_info->bProtocolType: 1
+[2020-08-01 18:32:07] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:32:07] sv_webapiv1.cpp(1613):handle_getconfig_call: ===>enter /api/v1/get_config_info proc:
+
+
+[2020-08-01 18:32:07] sv_webapiv1.cpp(1619):handle_getconfig_call: =============
+in = {"method":"get_config_info"}
+
+[2020-08-01 18:32:07] sv_protocol_api.cpp(143):sv_login: method: get_config_info
+[2020-08-01 18:32:07] sv_webapiv1.cpp(1655):handle_getconfig_call: szConfigFilePath = C:\Users\vpn\AppData\LocalLow\configinfo.txt
+[2020-08-01 18:32:07] sv_webapiv1.cpp(1678):handle_getconfig_call: 
+===>end /api/v1/get_config_info proc:
+
+
+[2020-08-01 18:32:07] sv_webapiv1.cpp(509):handle_sendsystemconfig_call: ===>enter /api/v1/client_system_config proc:
+
+
+[2020-08-01 18:32:07] sv_webapiv1.cpp(515):handle_sendsystemconfig_call: =============
+in = {"method": "client_system_config","addr":""}
+
+[2020-08-01 18:32:07] sv_protocol_api.cpp(143):sv_login: method: client_system_config
+[2020-08-01 18:32:07] sv_protocol.cpp(7284):read_ngvone_config: cstrNGAddr = 
+[2020-08-01 18:32:07] sv_protocol.cpp(7287):read_ngvone_config: cstrNGAddr.IsEmpty
+[2020-08-01 18:32:07] sv_protocol.cpp(7294):read_ngvone_config: cstrNGAddr = 172.18.30.117
+[2020-08-01 18:32:07] sv_protocol.cpp(7345):read_ngvone_config: 成功取出配置
+[2020-08-01 18:32:07] sv_protocol.cpp(7166):read_login_config: sv_ctx->ngvone_addr = 172.18.30.117
+[2020-08-01 18:32:07] sv_webapiv1.cpp(519):handle_sendsystemconfig_call: sv_login ret = 0
+[2020-08-01 18:32:07] sv_webapiv1.cpp(531):handle_sendsystemconfig_call: 
+===>end /api/v1/client_system_config proc:
+
+
+[2020-08-01 18:32:07] sv_webapiv1.cpp(1430):handle_get_mailphone_call: ===>enter /api/v1/get_mail_phone proc:
+
+
+[2020-08-01 18:32:07] sv_webapiv1.cpp(1436):handle_get_mailphone_call: =============
+in = {"method":"get_mail_phone"}
+
+[2020-08-01 18:32:07] sv_protocol_api.cpp(143):sv_login: method: get_mail_phone
+[2020-08-01 18:32:07] sv_protocol.cpp(3164):link_vone: enter: state_id(21), err_code(0), try to change new state_id(43)
+[2020-08-01 18:32:07] sv_protocol.cpp(3193):link_vone: state_id(43), err_code(0)
+[2020-08-01 18:32:07] sv_protocol.cpp(9856):sv_send_spa_packet: enter...
+[2020-08-01 18:32:07] sv_protocol.cpp(9924):sv_send_spa_packet: SendSPAMessageToVone ...
+[2020-08-01 18:32:07] sv_protocol.cpp(9926):sv_send_spa_packet: SendSPAMessageToVone Finished.
+[2020-08-01 18:32:08] sv_protocol.cpp(5984):ConnectWithTimeoutByMsec: ioctlsocket result: 0
+[2020-08-01 18:32:08] sv_protocol.cpp(9837):Connect_with_timeout_times: Try Connect to 172.18.30.117:443 with timeout 300ms return true at time 1
+[2020-08-01 18:32:08] sv_protocol.cpp(5939):ConnectWithTimeout: ioctlsocket result: 0
+[2020-08-01 18:32:08] sv_protocol.cpp(1958):connect_vone: ret: 0
+[2020-08-01 18:32:08] sv_protocol.cpp(1970):connect_vone: try to connect vone: 172.18.30.117:443, porto(0) ...
+[2020-08-01 18:32:08] sv_protocol.cpp(1971):connect_vone: cipher_suite: AES128-SHA:AES256-SHA:DES-CBC3-SHA:RC4-SHA:ECDHE-ECDSA-RC4-SHA:ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:ECDH+AES128:RSA+AESGCM:!aNULL:!MD5
+[2020-08-01 18:32:08] sv_protocol.cpp(2007):connect_vone: return ret: 0
+[2020-08-01 18:32:08] sv_protocol.cpp(5576):send_ssl_data: send_buf:
+POST /vone/login/get_config_info HTTP/1.1
+Referer: https://172.18.30.117/
+User-Agent: VONE-AUTH,WINDOWS,NULL,TOPCLINET,NULL
+Connection: keep-alive
+Host: 172.18.30.117
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 80
+Cookie: topsecsvportallogodir=default; topsecsvuilanguage=chinese; login_err_num=0; topsecsvportalstyle=style1; topsecsvportalname=default; seccheck=0; topafasfasfassession_id=2&181dae6e24a8f5fd
+
+HASH=FA7FA9E41AE64497D4EABE7054E01738BFD651A9299C758E7B17D5156443277B&TYPE=phone
+
+
+[2020-08-01 18:32:08] sv_protocol.cpp(5766):recv_ssl_data: ret=46
+[2020-08-01 18:32:08] sv_protocol.cpp(5778):recv_ssl_data: retcode=0, recv_buf:
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sat, 01 Aug 2020 10:44:00 GMT
+Content-Type: application/x-javascript
+Content-Length: 46
+Connection: keep-alive
+X-sv-ret: 0
+Pragma: no-cache
+Vary: Accept-Encoding
+X-Frame-Options: SAMEORIGIN
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-XSS-Protection:: 1
+X-Content-Type-Options:: nosniff
+X-Download-Options:: noopen
+Referrer-Policy: no-referrer-when-downgrade
+Content-Security-Policy: default-src 'self'; script-src https: 'unsafe-inline' 'unsafe-eval'; style-src https: 'unsafe-inline' 'unsafe-eval';img-src https:;connect-src *; frame-src *
+X-Permitted-Cross-Domain-Policies: master-only
+
+{
+    "Ret":0,
+    "phone":"",
+    "mail":""
+}
+[2020-08-01 18:32:08] sv_protocol.cpp(3221):link_vone: leave: state_id(21), err_code(0)
+[2020-08-01 18:32:08] sv_webapiv1.cpp(1441):handle_get_mailphone_call: sv_login ret = 0
+[2020-08-01 18:32:08] sv_webapiv1.cpp(1442):handle_get_mailphone_call: sv_login output =
+{
+    "Ret":0,
+    "phone":"",
+    "mail":""
+}
+[2020-08-01 18:32:08] sv_webapiv1.cpp(1451):handle_get_mailphone_call: 
+===>end /api/v1/get_mail_phone proc:
+
+
+[2020-08-01 18:32:08] sv_webapiv1.cpp(1044):handle_singlesignon_call: ===>enter /api/v1/websso proc:
+
+
+[2020-08-01 18:32:08] sv_webapiv1.cpp(1050):handle_singlesignon_call: =============
+in = 
+
+[2020-08-01 18:32:08] sv_protocol_api.cpp(143):sv_login: method: get_websso
+[2020-08-01 18:32:08] sv_protocol.cpp(3164):link_vone: enter: state_id(21), err_code(0), try to change new state_id(37)
+[2020-08-01 18:32:08] sv_protocol.cpp(3193):link_vone: state_id(37), err_code(0)
+[2020-08-01 18:32:08] sv_protocol.cpp(9856):sv_send_spa_packet: enter...
+[2020-08-01 18:32:08] sv_protocol.cpp(9924):sv_send_spa_packet: SendSPAMessageToVone ...
+[2020-08-01 18:32:08] sv_protocol.cpp(9926):sv_send_spa_packet: SendSPAMessageToVone Finished.
+[2020-08-01 18:32:08] sv_protocol.cpp(5984):ConnectWithTimeoutByMsec: ioctlsocket result: 0
+[2020-08-01 18:32:08] sv_protocol.cpp(9837):Connect_with_timeout_times: Try Connect to 172.18.30.117:443 with timeout 300ms return true at time 1
+[2020-08-01 18:32:08] sv_protocol.cpp(5939):ConnectWithTimeout: ioctlsocket result: 0
+[2020-08-01 18:32:08] sv_protocol.cpp(1958):connect_vone: ret: 0
+[2020-08-01 18:32:08] sv_protocol.cpp(1970):connect_vone: try to connect vone: 172.18.30.117:443, porto(0) ...
+[2020-08-01 18:32:08] sv_protocol.cpp(1971):connect_vone: cipher_suite: AES128-SHA:AES256-SHA:DES-CBC3-SHA:RC4-SHA:ECDHE-ECDSA-RC4-SHA:ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:ECDH+AES128:RSA+AESGCM:!aNULL:!MD5
+[2020-08-01 18:32:09] sv_protocol.cpp(2007):connect_vone: return ret: 0
+[2020-08-01 18:32:09] sv_protocol.cpp(5576):send_ssl_data: send_buf:
+GET /vone/portal/websso HTTP/1.1
+Accept: */*
+Referer: https://172.18.30.117/
+Host: 172.18.30.117
+Content-Type: application/x-www-form-urlencoded;charset=UTF-8;
+Connection: keep-alive
+Cookie: topsecsvportallogodir=default; topsecsvuilanguage=chinese; login_err_num=0; topsecsvportalstyle=style1; topsecsvportalname=default; sv_un=bGl5dWU%3D; seccheck=0; topafasfasfassession_id=2&181dae6e24a8f5fd
+User-Agent: VONE-AUTH,WINDOWS,NULL,TOPCLINET,NULL
+
+
+[2020-08-01 18:32:09] sv_protocol.cpp(5778):recv_ssl_data: retcode=0, recv_buf:
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sat, 01 Aug 2020 10:44:01 GMT
+Content-Type: text/plain,application/octet-stream
+Content-Length: 0
+Connection: keep-alive
+Pragma: no-cache
+Vary: Accept-Encoding
+X-Frame-Options: SAMEORIGIN
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-XSS-Protection:: 1
+X-Content-Type-Options:: nosniff
+X-Download-Options:: noopen
+Referrer-Policy: no-referrer-when-downgrade
+Content-Security-Policy: default-src 'self'; script-src https: 'unsafe-inline' 'unsafe-eval'; style-src https: 'unsafe-inline' 'unsafe-eval';img-src https:;connect-src *; frame-src *
+X-Permitted-Cross-Domain-Policies: master-only
+
+
+[2020-08-01 18:32:09] sv_protocol.cpp(3489):get_websso: length = 0
+[2020-08-01 18:32:09] sv_protocol.cpp(3221):link_vone: leave: state_id(21), err_code(0)
+[2020-08-01 18:32:09] sv_protocol_api.cpp(1028):api_get_websso: pResult =  
+[2020-08-01 18:32:09] sv_webapiv1.cpp(1060):handle_singlesignon_call: sv_login ret = 0
+[2020-08-01 18:32:09] sv_webapiv1.cpp(1061):handle_singlesignon_call: sv_login output =
+ 
+[2020-08-01 18:32:09] sv_webapiv1.cpp(1079):handle_singlesignon_call: 
+===>end /api/v1/websso proc:
+
+
+[2020-08-01 18:32:09] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:32:09] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:32:12] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:32:14] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:32:16] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:32:18] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:32:20] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:32:22] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:32:24] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:32:26] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:32:28] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:32:30] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:32:32] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:32:34] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:32:36] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:32:38] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:32:40] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:32:42] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:32:44] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:32:46] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:32:48] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:32:50] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:32:52] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:32:54] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:32:56] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:32:58] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:33:00] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:33:02] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:33:04] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:33:06] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:33:08] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:33:10] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:33:12] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:33:14] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:33:16] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:33:18] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:33:20] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:33:22] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:33:24] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:33:26] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:33:28] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:33:30] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:33:32] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:33:34] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:33:36] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:33:38] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:33:40] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:33:42] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:33:44] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:33:46] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:33:48] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:33:50] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:33:52] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:33:54] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:33:56] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:33:58] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:34:00] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:34:02] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:34:04] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:34:06] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:34:08] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:34:10] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:34:12] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:34:14] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:34:16] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:34:18] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:34:20] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:34:22] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:34:24] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:34:26] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:34:29] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:34:31] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:34:33] sv_protocol_api.cpp(143):sv_login: method: query_statistics
+[2020-08-01 18:34:35] sv_protocol_api.cpp(143):sv_login: method: query_statistics
