@@ -1,0 +1,62 @@
+{
+  "name": "test_add[-10-5--5]",
+  "status": "passed",
+  "parameters": [
+    {
+      "name": "a",
+      "value": "-10"
+    },
+    {
+      "name": "b",
+      "value": "5"
+    },
+    {
+      "name": "expect",
+      "value": "-5"
+    }
+  ],
+  "start": 1603183946034,
+  "stop": 1603183946035,
+  "uuid": "0f1c126c-88ae-4e9b-9a01-9b82f063a74e",
+  "historyId": "c946d4cd4173c54afb9529e1a7601940",
+  "testCaseId": "5e4ebed042d909ffea6fc25634686cb5",
+  "fullName": "pytest_live2_work.test_calc_yaml_fixture.TestCalc#test_add",
+  "labels": [
+    {
+      "name": "tag",
+      "value": "run(order=1)"
+    },
+    {
+      "name": "parentSuite",
+      "value": "pytest_live2_work"
+    },
+    {
+      "name": "suite",
+      "value": "test_calc_yaml_fixture"
+    },
+    {
+      "name": "subSuite",
+      "value": "TestCalc"
+    },
+    {
+      "name": "host",
+      "value": "LAPTOP-98UVNK3C"
+    },
+    {
+      "name": "thread",
+      "value": "18436-MainThread"
+    },
+    {
+      "name": "framework",
+      "value": "pytest"
+    },
+    {
+      "name": "language",
+      "value": "cpython3"
+    },
+    {
+      "name": "package",
+      "value": "pytest_live2_work.test_calc_yaml_fixture"
+    }
+  ]
+}
