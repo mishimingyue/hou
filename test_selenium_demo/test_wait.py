@@ -27,4 +27,3 @@ class TestWait:
 
     def test_baidu(self):
         self.driver.find_element(By.XPATH, '//*[@id="kw"]').send_keys("霍格沃茨")
-        s

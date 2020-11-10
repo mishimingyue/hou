@@ -42,7 +42,7 @@ class TestAction():
         sleep(3)
 
     # 将鼠标悬停在”设置“处
-    @pytest.mark.skip
+    # @pytest.mark.skip
     def test_movetoelment(self):
         self.driver.get("https://www.baidu.com")
         ele = self.driver.find_element_by_link_text("设置")
