@@ -1,0 +1,44 @@
+apps1:
+  app_name: "app1"
+  app_configuration: "0"
+  app_protocol: "HTTP"
+  app_port: "443"
+  app_ip: "app1.proxy.trusted.com"
+  app_url: "/login.php"
+
+
+apps2:
+  app_name: "app2"
+  app_configuration: "0"
+  app_protocol: "HTTP"
+  app_port: "443"
+  app_ip: "app2.proxy.trusted.com"
+  app_url: "/login.php"
+
+apps3:
+  app_name: "app3"
+  app_configuration: "0"
+  app_protocol: "HTTP"
+  app_port: "443"
+  app_ip: "app3.proxy.trusted.com"
+  app_url: "/login.php"
+
+apps4:
+  app_name: "app4"
+  app_configuration: "0"
+  app_protocol: "HTTP"
+  app_port: "443"
+  app_ip: "app2.proxy.trusted.com"
+  app_url: "/admin/login.html"
+
+#
+#desirecaps:
+#  platformName: "Android"
+#  deviceName: "hogwarts"
+#  appPackage: "com.tencent.wework"
+#  appActivity: ".launch.LaunchSplashActivity"
+#  noReset: "True"
+#
+#server:
+#  ip: "localhost"
+#  port: "4723"
