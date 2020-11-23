@@ -34,3 +34,4 @@ class MainPage(BasePage):
         self.find(By.XPATH, "//a/span[text()='%s']" % menu_text1).click()
         self.find(By.XPATH, "//a/span[text()='%s']" % menu_text2).click()
         return AddApp(self.driver)
+

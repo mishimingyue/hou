@@ -15,3 +15,7 @@ class AddApp(BasePage):
         self.find(By.ID, "add_app").click()
         from lxr_robot.test_peizhi.page.app_message import AppMessage
         return AppMessage(self.driver)
+
+    # def get_toast(self):
+    #     result = self.get_toast_text()
+    #     return result
