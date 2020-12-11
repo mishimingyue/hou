@@ -137,8 +137,10 @@ class SingleLinkList(object):
                 # 判断是否是头节点：cur==self._head或者pre=None
                 # 特殊情况：只有一个节点，删除节点则self._head=None
                 if cur == self._head:
+
                     self._head = cur.next
                 else:
+                    # 上一个节点直接指向要删除元素的后一个节点
                     pre.next = cur.next
                 break
             else:
