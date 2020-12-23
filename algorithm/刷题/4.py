@@ -12,7 +12,7 @@
 def plusOne(number_1):
     str1 = ''
     # number_1 = number_1
-    for i in range(len(number_1)):
+    for i in number_1:
         print(number_1[i])
     str2 = str(int(str1) + 1)
     shuzu = []
