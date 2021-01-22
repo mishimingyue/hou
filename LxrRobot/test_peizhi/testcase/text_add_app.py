@@ -23,7 +23,7 @@ class TestLXR:
     def setup(self):
         self.main = MainPage()
 
-    def test_login(self):
+    def test_add_app(self):
         username = "superman"
         password = "talent"
         self.main.login(username, password)
@@ -33,3 +33,18 @@ class TestLXR:
                                                                               app1_url)
 
         # self.main.click_first_list('应用管理', '应用列表').add_app_page().app_message({app1_name}, {app1_configuration},{app1_protocol}, {app1_port}, {app1_ip},{app1_url})
+
+    def test_add_hosts(self):
+        username = "superman"
+        password = "talent"
+        self.main.login(username, password)
+        sleep(3)
+        self.main.click_first_list('系统管理', '网络管理', 'HOST').add_host_page().add_host_message('1.1.1.1', 'hou1.test')
+
+    def test_add_user(self):
+        username = "superman"
+        password = "talent"
+        self.main.login(username, password)
+        sleep(3)
+        self.main.click_first_list('用户管理', '账号管理')
+        # .add_department_page().add_department_message('dep_1','code_1')

@@ -36,5 +36,7 @@ class BasePage:
 
     def wait_for_click(self, locator, timeout=10):
         element: WebElement = WebDriverWait(self.driver, timeout).until(
-            expected_conditions.element_to_be_clickable(locator))
+            expected_conditions.presence_of_all_elements_located)
         return element
+
+    # .element_to_be_clickable(locator)
